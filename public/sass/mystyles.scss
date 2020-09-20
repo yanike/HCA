@@ -1,0 +1,15 @@
+@charset "utf-8";
+@import "./node_modules/bulma/bulma.sass";
+
+#vending-error {
+    display: none;
+}
+
+#success {
+    display: none;
+}
+
+#purchase-list {
+    max-height: 200px;
+    overflow-x: scroll;
+}

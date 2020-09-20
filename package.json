@@ -1,0 +1,24 @@
+{
+  "name": "hca",
+  "version": "1.0.0",
+  "description": "Vending machine demo",
+  "main": "sass/mystyles.scss",
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "querystring": "^0.2.0",
+    "store": "^2.0.12",
+    "xml2json": "^0.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url public/sass/mystyles.scss public/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "author": "Yanike Mann",
+  "license": "ISC"
+}
