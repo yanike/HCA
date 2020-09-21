@@ -7,7 +7,7 @@ class App {
 	initialLoad() {
 		console.log("#App initialLoad.. Start");
 
-		//this.loadSodas();
+		this.loadSodas();
 		this.myStorage.setItem('balance', 0);
 		this.myStorage.setItem('purchases', 0);
 		this.myStorage.setItem('purchases_list', "");
