@@ -160,7 +160,7 @@ class App {
 			element.setAttribute("id", data[item].id);
 			element.setAttribute("data-id", data[item].id);
 			element.setAttribute("data-name", data[item].name);
-			element.setAttribute("data-price", data[item].value);
+			element.setAttribute("data-price", data[item].price);
 			element.setAttribute("data-type", data[item].type);
 			element.setAttribute("data-quantity", data[item].quantity);
 			element.className = "button is-large";
