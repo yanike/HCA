@@ -2,160 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vending Machine</title>
-    <link rel="stylesheet" href="/css/mystyles.css">
-    <script defer src="./js/App.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vending Machine</title>
+<link rel="stylesheet" href="/css/mystyles.css">
+<script defer src="./js/App.js"></script>
 </head>
 
 <body>
-    <section class="section">
-        <div class="container">
-            <h6><a href="/index2.html">Node.js (NEDB) project</a></h6>
-            <div class='rows'>
-                <div class='row'>
-                    <div class="columns">
-                        <div class="column">
-                            <h1 class="title">Vending Machine</h1>
-                            <h2 class="subtitle">Select a soda below</h2>
+	<section class="section">
+		<div class="container">
+			<h6>
+				<a href="/index2.html">(XML2JSON) project</a>
+			</h6>
+			<div class='rows'>
+				<div class='row'>
+					<div class="columns">
+						<div class="column">
+							<h1 class="title">Vending Machine</h1>
+							<h2 class="subtitle">Select a soda below</h2>
 
-                            <!-- Drinks -->
-                            <div id="sodas" class="buttons">
-                                <div class='rows' style="width: 100%;">
-                                    <div class='row'>
-                                        <div class="columns">
-                                            <div class="column is-half">
-                                                <a id="coca_cola" data-id="coca_cola" data-name="Coca-Cola"
-                                                    data-price="2.00" data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Coca-Cola" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Coca-Cola</a>
-                                            </div>
-                                            <div class="column is-half">
-                                                <a id="diet_coke" data-id="diet_coke" data-name="Diet Coke"
-                                                    data-price="1.50" data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Diet Coke" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Diet Coke</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='row'>
-                                        <div class="columns">
-                                            <div class="column is-half">
-                                                <a id="dr_pepper" data-id="dr_pepper" data-name="Dr. Pepper"
-                                                    data-price="2.50" data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Dr. Pepper" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Dr. Pepper</a>
-                                            </div>
-                                            <div class="column is-half">
-                                                <a id="sprite" data-id="sprite" data-name="Sprite" data-price="2.50"
-                                                    data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Sprite" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Sprite</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='row'>
-                                        <div class="columns">
-                                            <div class="column is-half">
-                                                <a id="fanta" data-id="fanta" data-name="Fanta" data-price="2.00"
-                                                    data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Fanta" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Fanta</a>
-                                            </div>
-                                            <div class="column is-half">
-                                                <a id="ginger_ale" data-id="ginger_ale" data-name="Ginger Ale"
-                                                    data-price="2.00" data-type="soda" data-quantity="5.00"
-                                                    class="button is-large is-fullwidth" tabindex="0"
-                                                    aria-label="Purchase Ginger Ale" onclick="app.btnClick(this);"
-                                                    onkeydown="app.keyDown(event,this);">Ginger Ale</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <!-- Display -->
-                            <nav class="level is-mobile">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Balance</p>
-                                        <p id="balance" class="title"></p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Purchases</p>
-                                        <p id="purchases" class="title"></p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Followers</p>
-                                        <p class="title">456K</p>
-                                    </div>
-                                </div>
-                            </nav>
+							<!-- Drinks -->
+							<div id="sodas" class="buttons">
+								<div class='rows' style="width: 100%;">
+									<div class='row'>
+										<div class="columns">
+											<div class="column is-half">
+												<a id="coca_cola" data-id="coca_cola" data-name="Coca-Cola"
+													data-price="2.00" data-type="soda" data-quantity="5.00"
+													class="button is-large is-fullwidth" tabindex="0"
+													aria-label="Purchase Coca-Cola"
+													onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Coca-Cola</a>
+											</div>
+											<div class="column is-half">
+												<a id="diet_coke" data-id="diet_coke" data-name="Diet Coke"
+													data-price="1.50" data-type="soda" data-quantity="5.00"
+													class="button is-large is-fullwidth" tabindex="0"
+													aria-label="Purchase Diet Coke"
+													onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Diet Coke</a>
+											</div>
+										</div>
+									</div>
+									<div class='row'>
+										<div class="columns">
+											<div class="column is-half">
+												<a id="dr_pepper" data-id="dr_pepper" data-name="Dr. Pepper"
+													data-price="2.50" data-type="soda" data-quantity="5.00"
+													class="button is-large is-fullwidth" tabindex="0"
+													aria-label="Purchase Dr. Pepper"
+													onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Dr. Pepper</a>
+											</div>
+											<div class="column is-half">
+												<a id="sprite" data-id="sprite" data-name="Sprite"
+													data-price="2.50" data-type="soda" data-quantity="5.00"
+													class="button is-large is-fullwidth" tabindex="0"
+													aria-label="Purchase Sprite" onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Sprite</a>
+											</div>
+										</div>
+									</div>
+									<div class='row'>
+										<div class="columns">
+											<div class="column is-half">
+												<a id="fanta" data-id="fanta" data-name="Fanta"
+													data-price="2.00" data-type="soda" data-quantity="5.00"
+													class="button is-large is-fullwidth" tabindex="0"
+													aria-label="Purchase Fanta" onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Fanta</a>
+											</div>
+											<div class="column is-half">
+												<a id="ginger_ale" data-id="ginger_ale"
+													data-name="Ginger Ale" data-price="2.00" data-type="soda"
+													data-quantity="5.00" class="button is-large is-fullwidth"
+													tabindex="0" aria-label="Purchase Ginger Ale"
+													onclick="app.btnClick(this);"
+													onkeydown="app.keyDown(event,this);">Ginger Ale</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<!-- Display -->
+							<nav class="level is-mobile">
+								<div class="level-item has-text-centered">
+									<div>
+										<p class="heading">Balance</p>
+										<p id="balance" class="title"></p>
+									</div>
+								</div>
+								<div class="level-item has-text-centered">
+									<div>
+										<p class="heading">Purchases</p>
+										<p id="purchases" class="title"></p>
+									</div>
+								</div>
+								<div class="level-item has-text-centered">
+									<div>
+										<p class="heading">Followers</p>
+										<p class="title">456K</p>
+									</div>
+								</div>
+							</nav>
 
-                            <!-- Vending Errors -->
-                            <article id="vending-error" class="message is-warning">
-                                <div class="message-header">
-                                    <p>Vending Errors</p>
-                                </div>
-                                <div id="vending-error-message" class="message-body">
-                                    content..
-                                </div>
-                            </article>
+							<!-- Vending Errors -->
+							<article id="vending-error" class="message is-warning">
+								<div class="message-header">
+									<p>Vending Errors</p>
+								</div>
+								<div id="vending-error-message" class="message-body">
+									content..</div>
+							</article>
 
-                            <!-- Coin Inserts -->
-                            <div class="buttons">
-                                <a class="button is-success is-light" data-shift="add" data-type="coin" data-value="25"
-                                    tabindex="0" aria-label="Insert Coin 25&cent;" onclick="app.btnClick(this);"
-                                    onkeydown="app.keyDown(event,this);">Insert Coin
-                                    (25&cent;)</a>
-                                <a class="button is-success is-light" data-shift="bounce" data-type="coin"
-                                    data-value="10" tabindex="0" aria-label="Insert Coin 10&cent;"
-                                    onclick="app.btnClick(this);" onkeydown="app.keyDown(event,this);">Insert Coin
-                                    (10&cent;)</a>
-                                <a class="button is-danger is-light" data-shift="remove" data-type="coin"
-                                    data-value="25" tabindex="0" aria-label="Return Coin" onclick="app.btnClick(this);"
-                                    onkeydown="app.keyDown(event,this);">Return
-                                    Coin</a>
-                            </div>
+							<!-- Coin Inserts -->
+							<div class="buttons">
+								<a class="button is-success is-light" data-shift="add"
+									data-type="coin" data-value="25" tabindex="0"
+									aria-label="Insert Coin 25&cent;" onclick="app.btnClick(this);"
+									onkeydown="app.keyDown(event,this);">Insert Coin (25&cent;)</a>
+								<a class="button is-success is-light" data-shift="bounce"
+									data-type="coin" data-value="10" tabindex="0"
+									aria-label="Insert Coin 10&cent;" onclick="app.btnClick(this);"
+									onkeydown="app.keyDown(event,this);">Insert Coin (10&cent;)</a>
+								<a class="button is-danger is-light" data-shift="remove"
+									data-type="coin" data-value="25" tabindex="0"
+									aria-label="Return Coin" onclick="app.btnClick(this);"
+									onkeydown="app.keyDown(event,this);">Return Coin</a>
+							</div>
 
-                            <!-- Success Message -->
-                            <article id="success" class="message is-success">
-                                <div class="message-header">
-                                    <p>Success Message</p>
-                                </div>
-                                <div id="success-message" class="message-body">
-                                    content..
-                                </div>
-                            </article>
+							<!-- Success Message -->
+							<article id="success" class="message is-success">
+								<div class="message-header">
+									<p>Success Message</p>
+								</div>
+								<div id="success-message" class="message-body">content..</div>
+							</article>
 
-                            <!-- Purchase List -->
-                            <article class="message">
-                                <div class="message-header">
-                                    <p>List of all purchases</p>
-                                </div>
-                                <div id="purchase-list" class="message-body" aria-label="List of purchases"
-                                    tabindex="0">
-                                    Hi, purchase a soda to enjoy!
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<!-- Purchase List -->
+							<article class="message">
+								<div class="message-header">
+									<p>List of all purchases</p>
+								</div>
+								<div id="purchase-list" class="message-body"
+									aria-label="List of purchases" tabindex="0">Hi, purchase
+									a soda to enjoy!</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>

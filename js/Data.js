@@ -5,7 +5,7 @@ class Data {
 	getDataFile() {
 		var jsonData;
 
-		fs.readFile('./data.xml', function (err, data) {
+		fs.readFile('data.xml', function (err, data) {
 			var json = JSON.parse(parser.toJson(data));
 			jsonData = json;
 
@@ -13,12 +13,12 @@ class Data {
 
 			console.log(jsonData.app.items.item);
 			for(var k in jsonData.app.items.item){
-				console.log(jsonData.app.items.item[k].name);
+				console.log(jsonData.app.items.item[k]);
 			}
 
 			var stringified = JSON.stringify(json);
 			var xml = parser.toXml(stringified);
-			fs.writeFile('./data.xml', xml, function (err, data) {
+			fs.writeFile('../data.xml', xml, function (err, data) {
 				if (err) {
 					console.log(err);
 				}

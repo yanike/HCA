@@ -3,22 +3,6 @@ const { request, response } = require('express');
 const express = require('express');
 const app = express();
 
-// database
-const Datastore = require('nedb');
-const database = new Datastore('database.db');
-database.loadDatabase();
-/*
-// Initial data for database
-database.insert([
-    { id: 'coca_cola', name: 'Coca-Cola', value: '2.00', type: 'soda', quantity: '5.00'},
-    { id: 'diet_coke', name: 'Diet Coke', value: '1.50', type: 'soda', quantity: '5.00'},
-    { id: 'dr_pepper', name: 'Dr. Pepper', value: '2.50', type: 'soda', quantity: '5.00'},
-    { id: 'sprite', name: 'Sprite', value: '2.50', type: 'soda', quantity: '5.00'},
-    { id: 'fanta', name: 'Fanta', value: '2.00', type: 'soda', quantity: '5.00'},
-    { id: 'ginger_ale', name: 'Ginger Ale', value: '2.00', type: 'soda', quantity: '5.00'},
-]);
-*/
-
 // actions
 const Actions = require('./js/Actions');
 
