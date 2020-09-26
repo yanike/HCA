@@ -7,7 +7,6 @@ const app = express();
 const Actions = require('./js/Actions');
 
 // Config the app with port and public files while setting a limit on post
-app.listen(3000, () => console.log('listening at 3000'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
@@ -18,3 +17,5 @@ app.get('/api', (request, response) => {
     // Return response from Actions
     Actions.prototype.getSodas(response);
 });
+
+app.listen(3000, () => console.log('listening at http://localhost:3000'));
