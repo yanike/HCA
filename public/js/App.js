@@ -3,11 +3,10 @@ class App {
 		this.purchasesList = [];
 		this.myStorage = window.localStorage;
 	}
-
+	
 	initialLoad() {
 		console.log("#App initialLoad.. Start");
-
-		//this.loadSodas();
+		
 		this.myStorage.setItem('balance', 0);
 		this.myStorage.setItem('purchases', 0);
 		this.myStorage.setItem('purchases_list', "");
@@ -17,14 +16,23 @@ class App {
 		console.log("#App initialLoad.. End");
 	}
 
-	// Onkeydown
+	/**
+	 * Onkeydown event for buttons
+	 * 
+	 * @param {*} ev 
+	 * @param {*} element 
+	 */
 	keyDown(ev, element){
 		if (ev.keyCode === 13) {
 			this.btnClick(element);
 		}
 	}
 
-	// Action with a button is pressed
+	/**
+	 * Action with a button is pressed
+	 * 
+	 * @param {*} ev 
+	 */
 	btnClick(ev) {
 		console.log("#App btnClick.. Start");
 		
@@ -107,7 +115,12 @@ class App {
 		console.log("#App btnClick.. End");
 	}
 
-	// API for all calls
+	/**
+	 * API for all calls
+	 * 
+	 * @param {*} target 
+	 * @param {*} opts 
+	 */
 	purchaseMade(target, opts) {
 		console.log("#App purchaseMade.. Start");
 
@@ -146,47 +159,6 @@ class App {
 		}, 2000);
 
 		console.log("#App purchaseMade.. End");
-	}
-
-	// Get sodas form inventory
-	async loadSodas() {
-		console.log("#App loadSodas.. Start");
-	
-		const response = await fetch('/api');
-		const data = await response.json();
-
-		for(const item in data){
-			var element = document.createElement('a');
-			element.setAttribute("id", data[item].id);
-			element.setAttribute("data-id", data[item].id);
-			element.setAttribute("data-name", data[item].name);
-			element.setAttribute("data-price", data[item].value);
-			element.setAttribute("data-type", data[item].type);
-			element.setAttribute("data-quantity", data[item].quantity);
-			element.className = "button is-large";
-			element.onclick = function(){
-				app.btnClick(this);
-			};
-			element.innerText = data[item].name;
-			element.tabIndex = data[item];
-			element.setAttribute("aria-label", "Purchase " + data[item].name);
-
-			function btnKey(event){
-				app.keyDown(event, event.target);
-			}
-
-			if (element.addEventListener) {
-				element.addEventListener('keydown', btnKey, false);
-			} else if (window.attachEvent) {
-				element.attachEvent('on' + 'keydown', FUNCTION);
-			} else {
-				element['on' + 'EVENT'] = FUNCTION;
-			}
-
-			document.getElementById('sodas').append(element);
-		}
-
-		console.log("#App loadSodas.. End");
 	}
 }
 

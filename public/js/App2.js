@@ -17,14 +17,23 @@ class App {
 		console.log("#App initialLoad.. End");
 	}
 
-	// Onkeydown
+	/**
+	 * Onkeydown event for buttons
+	 * 
+	 * @param {*} ev 
+	 * @param {*} element 
+	 */
 	keyDown(ev, element){
 		if (ev.keyCode === 13) {
 			this.btnClick(element);
 		}
 	}
 
-	// Action with a button is pressed
+	/**
+	 * Action with a button is pressed
+	 * 
+	 * @param {*} ev 
+	 */
 	btnClick(ev) {
 		console.log("#App btnClick.. Start");
 		
@@ -107,7 +116,12 @@ class App {
 		console.log("#App btnClick.. End");
 	}
 
-	// API for all calls
+	/**
+	 * API for all calls
+	 * 
+	 * @param {*} target 
+	 * @param {*} opts 
+	 */
 	purchaseMade(target, opts) {
 		console.log("#App purchaseMade.. Start");
 
@@ -148,7 +162,9 @@ class App {
 		console.log("#App purchaseMade.. End");
 	}
 
-	// Get sodas form inventory
+	/**
+	 * Get sodas form inventory
+	 */
 	async loadSodas() {
 		console.log("#App loadSodas.. Start");
 	

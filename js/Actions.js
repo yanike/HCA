@@ -2,6 +2,11 @@ const fs = require('fs');
 const parser = require('xml2json');
 
 module.exports = class Actions {
+	/**
+	 * Get sodas from the data
+	 * 
+	 * @param {*} response 
+	 */
 	getSodas(response) {	
 		console.log("#Actions getSodas.. Start");
 		
